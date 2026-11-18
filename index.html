@@ -1,1 +1,100 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMMEDIA - Profesyonel Araba Fotoğraf ve Video Çekimi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=80') center/cover no-repeat; }
+        .package-card.selected { border-color: #ef4444; box-shadow: 0 0 20px rgba(239,68,68,0.4); }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-2xl font-bold">ECMMEDIA</span>
+            <div class="hidden md:flex space-x-6">
+                <a href="#paketler" class="hover:text-red-500">Paketler</a>
+                <a href="#galeri" class="hover:text-red-500">Galeri</a>
+                <a href="#randevu" class="hover:text-red-500">Randevu Al</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-20">
+        <div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6">ARABANIZI<br><span class="text-red-500">SANAT ESERİ</span><br>YAPALIM</h1>
+            <p class="text-xl mb-8 text-gray-300">Profesyonel fotoğraf ve video çekimleri – Çorum</p>
+            <a href="#randevu" class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-full font-semibold">Hemen Randevu Al</a>
+        </div>
+    </section>
+    <section id="paketler" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Paketlerimiz</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-900 border-2 border-gray-800 rounded-2xl p-6 package-card cursor-pointer" data-package="Fotoğraf" data-price="1800">
+                    <h3 class="text-2xl font-bold">Fotoğraf</h3>
+                    <div class="text-4xl font-black my-4">1.800 TL</div>
+                    <p class="text-gray-400">15-20 profesyonel fotoğraf</p>
+                </div>
+                <div class="bg-gray-900 border-2 border-red-600 rounded-2xl p-6 package-card cursor-pointer" data-package="Kombo" data-price="3500">
+                    <h3 class="text-2xl font-bold">Kombo Pro</h3>
+                    <div class="text-4xl font-black my-4">3.500 TL</div>
+                    <p class="text-gray-400">Foto + Video</p>
+                </div>
+                <div class="bg-gray-900 border-2 border-gray-800 rounded-2xl p-6 package-card cursor-pointer" data-package="Premium" data-price="5000">
+                    <h3 class="text-2xl font-bold">Premium</h3>
+                    <div class="text-4xl font-black my-4">5.000 TL</div>
+                    <p class="text-gray-400">Drone + Detaylı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="galeri" class="py-20 bg-gray-950">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Galeri</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600" class="rounded-xl h-64 object-cover" alt="Araba">
+                <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?w=600" class="rounded-xl h-64 object-cover" alt="Araba">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600" class="rounded-xl h-64 object-cover" alt="Araba">
+            </div>
+        </div>
+    </section>
+    <section id="randevu" class="py-20 bg-black">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="text-4xl font-bold text-center mb-8">Randevu Al</h2>
+            <form id="booking-form" class="bg-gray-900 p-8 rounded-2xl space-y-4">
+                <input type="text" required placeholder="Ad Soyad" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3">
+                <input type="tel" required placeholder="Telefon" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3">
+                <input type="text" required placeholder="Araç Modeli" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3">
+                <input type="date" required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3">
+                <select required class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3">
+                    <option value="">Paket seçin</option>
+                    <option>Fotoğraf - 1.800 TL</option>
+                    <option>Kombo - 3.500 TL</option>
+                    <option>Premium - 5.000 TL</option>
+                </select>
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 py-4 rounded-lg font-bold">Randevu Talebi Gönder</button>
+            </form>
+            <div id="success" class="hidden mt-6 bg-green-900/40 border border-green-500 p-6 rounded-2xl text-center">
+                Randevu talebiniz alındı! En kısa sürede iletişime geçeceğiz.
+            </div>
+        </div>
+    </section>
+    <footer class="py-10 text-center text-gray-500 bg-gray-950">ECMMEDIA © 2026 – Çorum</footer>
+    <script>
+        document.getElementById('booking-form').onsubmit = function(e) {
+            e.preventDefault();
+            this.classList.add('hidden');
+            document.getElementById('success').classList.remove('hidden');
+        };
+        document.querySelectorAll('.package-card').forEach(c => {
+            c.onclick = function() {
+                document.querySelectorAll('.package-card').forEach(x => x.classList.remove('selected'));
+                this.classList.add('selected');
+            };
+        });
+    </script>
+</body>
+</html>
